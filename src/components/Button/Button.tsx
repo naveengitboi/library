@@ -1,22 +1,19 @@
-import React, {MouseEventHandler} from 'react';
+import React, { MouseEventHandler, ReactNode } from 'react';
 import { ButtonStyled } from './Button.styled';
 
-
 export type ButtonParams = {
-    size?: 'small' | 'medium' | 'large';
-    variant?: 'primary' | 'secondary' ;
-    children: React.ReactNode;
-    onClick?:MouseEventHandler<HTMLButtonElement>;
+  variant: 'primary' | 'secondary';
+  children: ReactNode;
+  size?: 'small' | 'medium' | 'large';
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
+const Button = ({size = 'medium', children, variant = 'primary', onClick}: ButtonParams) => {
+  return (
+    <ButtonStyled variant={variant} size={size} onClick={onClick}>
+      {children}
+    </ButtonStyled>
+  );
+};
 
-const Button = ({children="Hello world"}:ButtonParams) => {
-    return(
-        <ButtonStyled>
-            {children}
-        </ButtonStyled>
-    )
-}
-
-
-export default Button
+export default Button;

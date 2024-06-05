@@ -1,30 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ES2021",         
-     "lib": [
+    "target": "ES2021",
+    "module": "ESNext",
+    "lib": [
       "DOM",
-      "ESNext",
       "DOM.Iterable",
-     ],             
-    "jsx": "react", 
-    "module": "ESNext",                              
-    "moduleResolution": "Node",                    
-     "resolveJsonModule": false,                        
-    "allowJs": true,                                  
-   "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
-  "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
-   "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
-    "noEmit": true,                                   /* Disable emitting files from a compilation. */
-    "esModuleInterop": true,                             
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-
-    /* Type Checking */ 
-    "strict": true,                                      /* Enable all strict type-checking options. */
-  
-   "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
-    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
-      "src":"src",
+      "ESNext"
+    ],
+    "allowJs": true,
+    "jsx": "react",
+    "declaration": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": false,
+    "rootDir": "src",
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
 }

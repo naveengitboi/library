@@ -18,3 +18,5 @@ lerna-debug.log*
 /.idea
 .project
 .settings
+
+*storybook.log

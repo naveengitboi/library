@@ -1,5 +1,5 @@
 {
-  "name": "library",
+  "name": "@naveengitboi/library",
   "version": "0.0.1",
   "description": "ui library ",
   "main": "dist/index.js",
@@ -12,18 +12,45 @@
     "README.md"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "build:packdev": "cross-env NODE_ENV=development npm run build",
+    "build:packprod": "cross-env NODE_ENV=development npm run build",
+    "build:watch": "rollup -c --bundleConfig --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
-  "author": "",
+  "author": "naveenjangiti",
   "license": "ISC",
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.1.5",
+    "@storybook/addon-interactions": "^8.1.5",
+    "@storybook/addon-links": "^8.1.5",
+    "@storybook/addon-onboarding": "^8.1.5",
+    "@storybook/blocks": "^8.1.5",
+    "@storybook/react": "^8.1.5",
+    "@storybook/react-vite": "^8.1.5",
+    "@storybook/test": "^8.1.5",
     "@types/react": "^18.3.3",
+    "@types/styled-components": "^5.1.34",
+    "cross-env": "^7.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rimraf": "^5.0.7",
+    "rollup": "^4.18.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "storybook": "^8.1.5",
     "styled-components": "^6.1.11",
     "typescript": "^5.4.5"
   }
